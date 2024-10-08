@@ -1,0 +1,8 @@
+requests
+aiodns
+aiohttp
+azure-storage-blob
+pandas
+colorama
+pathlib
+datetime

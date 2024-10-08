@@ -1,0 +1,2 @@
+# Blob Storage	https://<storage-account>.blob.core.windows.net/<container-name>
+blob.core.windows.net
