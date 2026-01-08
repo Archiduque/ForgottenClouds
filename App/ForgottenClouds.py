@@ -1,6 +1,7 @@
 from utils import *
 from config import *
 from MicrosoftAzure.az import Azure
+from AWS.aws import AWS
 
 
 def ForgottenClouds():
@@ -24,14 +25,6 @@ def ForgottenClouds():
     keywords = readTXTFile(keywords_file)
     print(f"[{INFO}] Importing Keywords: {len(keywords)}")
 
-    # Azure Resources
-    azure_resources = readTXTFile(azure_resources_file)
-    print(f"[{INFO}] Importing Azure Resources: {len(azure_resources)}")
-
-    # Containers
-    containers = readTXTFile(containers_file)
-    print(f"[{INFO}] Importing Container Names: {len(containers)}")
-
     # Companies
     companies = readTXTFile(companies_file)
     print(f"[{INFO}] Importing Companies: {len(companies)}")
@@ -44,8 +37,34 @@ def ForgottenClouds():
     # Print the action in place
     print(f"[{INFO}] Checking Azure")
 
+    # Azure Resources
+    azure_resources = readTXTFile(azure_resources_file)
+    print(f"[{INFO}] Importing Azure Resources: {len(azure_resources)}")
+
+    # Containers
+    containers = readTXTFile(containers_file)
+    print(f"[{INFO}] Importing Container Names: {len(containers)}")
+
     # Execute the flow for Azure Resources
     Azure(companies, keywords, azure_resources)
+
+    ###############################################################################################
+    ############################################# AWS #############################################
+    ###############################################################################################
+
+    # Print the action in place
+    print(f"[{INFO}] Checking AWS")
+
+    # AWS Resources
+    aws_resources = readTXTFile(aws_resources_file)
+    print(f"[{INFO}] Importing AWS Resources Names: {len(aws_resources)}")
+
+    # AWS Regions
+    aws_regions = readTXTFile(aws_regions_file)
+    print(f"[{INFO}] Importing AWS Regions: {len(aws_regions)}")
+
+    # Execute the flow for Azure Resources
+    AWS(companies, keywords, aws_resources, aws_regions)
 
 
 if __name__ == "__main__":

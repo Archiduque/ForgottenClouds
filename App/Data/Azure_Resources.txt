@@ -1,2 +1,26 @@
-# Blob Storage	https://<storage-account>.blob.core.windows.net/<container-name>
+# Blob Storage	https://<storage-account>.blob.core.windows.net
 blob.core.windows.net
+# Static website (Blob Storage)	https://<storage-account>.web.core.windows.net
+# Data Lake Storage Gen2	https://<storage-account>.dfs.core.windows.net
+# Azure Files	https://<storage-account>.file.core.windows.net
+# Queue Storage	https://<storage-account>.queue.core.windows.net
+# Table Storage	https://<storage-account>.table.core.windows.net
+# management.core.windows.net
+# accesscontrol.windows.net
+# onmicrosoft.com
+# azure-api.net
+# biztalk.windows.net
+# cloudapp.net
+# cloudapp.azure.com
+# azurecr.io
+# azurecontainer.io
+# vo.msecnd.net -> All the resources have DNS so we can use the current technique to brute-force them
+# azurefd.net -> All the resources have DNS so we can use the current technique to brute-force them
+# origin.mediaservices.windows.net
+# azure-mobile.net
+# servicebus.windows.net
+# database.windows.net
+# azureedge.net
+# trafficmanager.net
+# azurewebsites.net
+# visualstudio.com -> All the resources have DNS so we can use the current technique to brute-force them

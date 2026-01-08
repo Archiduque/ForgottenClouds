@@ -64,13 +64,13 @@ def permutation(company_name: str, keywords: list[str]) -> list[str]:
     permutations.append(f"{company_name}")
 
     for keyword in keywords:
-        # Prepend company name to keywords and resource -> <keyword><company_name>.<resource>
+        # Prepend company name to keywords -> <keyword><company_name>.<resource>
         permutation = None
         permutation = f"{keyword}{company_name}"
         # Validate permutation and add it to the list if valid
         permutations.append(permutation) if validatePermutation(permutation) else None
 
-        # Append company name to keywords and resource -> <company_name><keyword>.<resource>
+        # Append company name to keywords -> <company_name><keyword>.<resource>
         permutation = None
         permutation = f"{company_name}{keyword}"
         # Validate permutation and add it to the list if valid

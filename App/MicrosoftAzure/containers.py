@@ -154,7 +154,7 @@ async def checkContainers(URLs: list[str]) -> list[str]:
 
     tasks = []
 
-    async with aiohttp.ClientSession(trust_env=True) as session:
+    async with aiohttp.ClientSession(trust_env = True) as session:
         # Create list of tasks. In this case all the URLs to be checked
         for URL in URLs:
             tasks.append(asyncio.ensure_future(fetchALL(session, URL)))
